@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Lobby.gd" type="Script" id=1]
+[ext_resource path="res://Muli-Regular - Copia.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Lobby" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="buttonHost" type="Button" parent="."]
+margin_left = 373.162
+margin_top = 56.1155
+margin_right = 660.162
+margin_bottom = 131.115
+custom_fonts/font = SubResource( 1 )
+text = "Host Game"
+
+[node name="buttonJoin" type="Button" parent="."]
+margin_left = 374.325
+margin_top = 150.27
+margin_right = 661.325
+margin_bottom = 225.27
+custom_fonts/font = SubResource( 1 )
+text = "Join Game"
+
+[node name="buttonStart" type="Button" parent="."]
+margin_left = 570.0
+margin_top = 322.0
+margin_right = 772.0
+margin_bottom = 380.0
+custom_fonts/font = SubResource( 3 )
+text = "Começar"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 60.0
+margin_top = 303.0
+margin_right = 312.0
+margin_bottom = 384.0
+custom_fonts/font = SubResource( 2 )
+text = "Players Conectados:"
+[connection signal="pressed" from="buttonHost" to="." method="_on_buttonHost_pressed"]
+[connection signal="pressed" from="buttonJoin" to="." method="_on_buttonJoin_pressed"]
+[connection signal="pressed" from="buttonStart" to="." method="_on_buttonStart_pressed"]
